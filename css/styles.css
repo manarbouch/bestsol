@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+    -webkit-text-size-adjust: none; 
+}
+
+/* Natural box layout model */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #004b8e;
+    border-top: 40px solid #004b8e;
+    background-image: url(../images/sun.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding: 20px;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 3rem;
+    padding-left: 60px;
+    color: #e05b13;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation */
+nav {
+    background-color: #004b8e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    list-style: none;
+}
+
+nav li {
+    flex: 1;
+}
+
+nav li a {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    border-right: 1px solid #000;
+}
+
+nav li:last-child a {
+    border-right: none;
+}
+
+nav li a:hover {
+    background-color: #003360;
+}
+
+nav li.active a {
+    background-color: #002751;
+}
+
+/* Main Content */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+main h1, main h2 {
+    color: #e05b13;
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+main p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Elements */
+main fieldset {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    background-color: #fff;
+}
+
+main fieldset legend {
+    color: #004b8e;
+    font-weight: 700;
+}
+
+main form label {
+    display: block;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+main form input, main form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+main form input[type="number"] {
+    width: auto;
+}
+
+main form select {
+    width: 100%;
+    max-width: 15rem;
+}
+
+main button {
+    background: linear-gradient(to bottom, #004b8e 1%, #002751 100%);
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 240px;
+    border: none;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+main button:hover {
+    background-color: #003360;
+}
+
+footer {
+    background-color: #004b8e;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+    }
+
+    main {
+        padding: 2rem 10%;
+    }
+
+    main figure img {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 30em) {
+    main figure {
+        width: 70%;
+        float: right;
+    }
+}
+
+#solarChart {
+    max-width: 100%;
+    margin: 2rem 0;
+}
